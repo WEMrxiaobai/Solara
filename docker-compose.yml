@@ -1,0 +1,10 @@
+services:
+  solara-music:
+    build: . 
+    container_name: solara-music
+    restart: unless-stopped
+    ports:
+      - "3333:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
